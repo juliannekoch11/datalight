@@ -1,0 +1,41 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <title>DataLight</title>
+            <link rel="stylesheet" href="styles.css">
+            <meta charset="UTF-8">
+            <script src="script.js"></script>
+        </head>
+        <body>
+            <h1>Welcome to DataLight</h1>
+        </body>
+            <script>
+                window.fbAsyncInit = function() {
+                    FB.init({
+                    appId      : '453093795064853',
+                    cookie     : true,
+                    xfbml      : true,
+                    version    : 'v2.8'
+                    });
+                FB.AppEvents.logPageView();  
+                FB.ui(
+                    {
+                        method: 'share',
+                        href: 'https://developers.facebook.com/docs/'
+                    }, function(response){});
+                };
+
+                (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+                
+//                
+//                FB.getLoginStatus(function(response) {
+//                statusChangeCallback(response);
+//                });
+            </script>
+    </html>
